@@ -1,4 +1,4 @@
-# Team Ooga Booga 🦍🍌
+# Team Ooga Booga 🪨🍌🦍
 
 We eat bananas. We make code. We give code to the tribe.
 
