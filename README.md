@@ -1,4 +1,4 @@
-# Banana Certified Accounting 🦍🍌
+# Banana Certified Accounting 🍌🦍
 
 Count bananas. Keep receipts. Build in public.
 
