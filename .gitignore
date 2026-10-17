@@ -1,0 +1,10 @@
+# Public planning repository: local confidential working material stays untracked.
+# This is a convenience, not access control. Review every change before publishing.
+private/
+receipts/
+invoices/
+.env
+.env.*
+*.key
+*.pem
+.DS_Store
