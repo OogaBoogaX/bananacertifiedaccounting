@@ -1,47 +1,64 @@
 # Initial inquiry to SPI
 
-**Status:** draft — not sent.
+**Status:** **Deferred. Draft — not sent.** Retained for possible future use; no contact or application is currently planned. Sending would require a new team decision; see [Before sending](#before-sending).
 
 **Prepared:** October 17, 2026.
 
+**Decision, October 17, 2026:** defer SPI and focus current work on bitcoin donation readiness and reducing AI costs. See the [decision log](../../governance/decisions.md) and [funding decision brief](../README.md#spi-inquiry-decision-brief). License direction remains **undecided**.
+
+Reconsider only when a concrete donor, grant or administrative need makes sponsorship useful. There is no scheduled follow-up. The draft below reflects the October 17 snapshot and must be refreshed if contact is later authorized; it is not a current sending task.
+
 **To:** board@spi-inc.org
 
-**Subject:** Preliminary fiscal sponsorship inquiry — Team Ooga Booga / OogaBoogaX
+**From:** to be chosen by the team.
+
+**Subject:** Informal fit inquiry: Team Ooga Booga's young Bitcoin software projects
 
 ## Email draft
 
 Hello SPI Board,
 
-We're Team Ooga Booga (OogaBoogaX), a worldwide volunteer developer community building freely available software, primarily around Bitcoin. We're exploring whether becoming an SPI associated project would be a suitable way to receive eligible tax-deductible contributions toward our project expenses.
+We're Team Ooga Booga (OogaBoogaX on GitHub), a worldwide volunteer group building publicly available software, mostly Bitcoin-related. We build in public and actively teach people who want to contribute. Could you advise whether SPI association might fit our projects later? This is an informal inquiry; we understand that we would raise donations ourselves.
 
-Our work includes:
+Our current projects include:
 
-- [EntropyLab](https://github.com/OogaBoogaX/entropylab), an offline Bitcoin key and wallet calculator with technical explanations and tools for testing and learning.
-- [Lightning Foundry](https://github.com/OogaBoogaX/lightningfoundry), an early-stage platform for operating and automating Lightning routing nodes. Its goals include routing and fee optimization as well as publishing findings about node operation and economics.
-- [Ooga Booga Land](https://github.com/OogaBoogaX/oogaboogaland), a public community world showcasing projects and contributors. We also share knowledge in public discussions and help newcomers make their first contributions.
+- [EntropyLab](https://github.com/OogaBoogaX/entropylab), an offline Bitcoin key and wallet calculator for learning and testing.
+- [Lightning Foundry](https://github.com/OogaBoogaX/lightningfoundry), pre-alpha design and tooling for Lightning routing nodes, distinct from our launched node.
+- [Ooga Booga Land](https://github.com/OogaBoogaX/oogaboogaland), an interactive community world showcasing projects and contributors.
 
-Contributors currently volunteer their time. Initially, funding would cover project expenses, primarily AI development tools. Our preliminary estimate is $2,500–$5,000 per month, although individual months may be below or above that range. We would like to understand how SPI would treat subscriptions, API usage, and related compute used for approved project work. This is a planning estimate, not a reconciled budget or committed donation revenue. Paid development could be considered later if funding permits.
+These repositories are young. We are documenting releases, contributions and evidence of use without overstating adoption.
 
-Our repositories use a custom "Ooga Booga License," intended as our community's expression of Unlicense-like freedoms to use, modify, redistribute, and sell the work. We are willing to standardize the legal wording to meet appropriate sponsorship requirements while preserving that intent.
+Our initial request concerns documented project expenses, mainly AI development tools. The [budget](https://github.com/OogaBoogaX/bananacertifiedaccounting/blob/rock/finance/budget.md) is an unapproved planning estimate. We are itemizing subscriptions, clarifying whether API usage and compute are included, and separating project from personal use. Paid development is outside this request; no funding commitments are recorded.
 
-Before preparing a formal application, could you advise on:
+We use a custom Ooga Booga License. No license change has been decided, and we claim no equivalence to a standard license.
 
-1. Whether our activities and current project maturity appear compatible with SPI, and whether association would make more sense for the group of projects or an individual project.
-2. Whether project-related AI subscriptions, API usage, and compute could be eligible for direct payment or documented reimbursement, including how shared personal/project subscriptions should be handled.
-3. What information you would need about contributor countries, vendors, project governance, and licensing to assess practical fit.
-4. The most useful next steps and supporting materials for an initial discussion.
+The team has launched a Lightning node, plans to accept direct bitcoin donations, and intends to hold its treasury in bitcoin. We have not established how that could fit with a sponsor's custody and payment rules.
 
-Our repositories are at https://github.com/OogaBoogaX. We can provide a more detailed budget, project history, contributor-country information, and a designated liaison as the discussion develops.
+Could you advise on:
 
-Thank you for your time,
+1. Maturity expectations and whether one project or the group would fit better?
+2. Licensing requirements where SPI would not hold copyright?
+3. Eligibility, allocation and contract requirements for recurring AI subscriptions, API usage and compute?
+4. Whether our intended bitcoin treasury and direct Lightning gifts can coexist with SPI association, and what governance, liaison and private payment information you would need?
 
-Team Ooga Booga / OogaBoogaX
+Thank you,
+
+[Sender name], for Team Ooga Booga
+[Contact email]
 
 ## Before sending
 
-- Choose an authorized sender and add their name/contact details if desired.
-- Confirm that the project descriptions and expense estimate still reflect the team's work.
-- Confirm which subscriptions, usage charges, and compute costs are actually part of the request; no providers or amounts have been invented here.
-- Retain the final sent version and date, then record any reply as a concise decision summary. Do not publish private correspondence without permission.
+- [ ] Identify a concrete need under the [revisit conditions](../README.md#spi-inquiry-decision-brief) and explicitly decide to end the deferral.
+- [ ] Authorize the final message and sender in the [decision log](../../governance/decisions.md); fill in the placeholders.
+- [ ] Confirm descriptions against the [project history](../project-history.md) and ensure linked documents are publicly available in their reviewed form.
+- [ ] Confirm the expense scope and preserve the distinction between an estimate and actual spending.
+- [ ] Confirm the license sentence reports the team's undecided position; it promises no migration.
+- [ ] Prepare relevant facts about the [Lightning setup](../README.md#existing-donation-features), custody and any historical receipts privately. Do not claim no historical receipts merely because none are reconciled here.
+- [ ] Recheck the official sources below if sending later; keep planned accounting software out of the existing-project list until it exists.
 
-Recipient and process checked against [SPI contact information](https://www.spi-inc.org/contact/) and the [Associated Project HOWTO](https://www.spi-inc.org/projects/associated-project-howto/), October 17, 2026.
+## After sending
+
+- Keep the sent version and replies in restricted storage; do not publish private correspondence without permission.
+- Record the send date and, later, a non-private summary of answers in the decision log. Update the [fit check](fit-check.md#questions-to-resolve).
+
+Recipient, informal process and expense questions checked against [SPI contact information](https://www.spi-inc.org/contact/), the [Associated Project HOWTO](https://www.spi-inc.org/projects/associated-project-howto/) and the [Treasurer's FAQ](https://www.spi-inc.org/treasurer/faq/) on October 17, 2026. SPI invites non-committal informal discussions and lists the board address above. Project descriptions rely on the dated [public history](../project-history.md). Teaching, node launch and bitcoin-treasury plans are team-supplied statements dated October 17, 2026, not independent evidence of impact or receipts.

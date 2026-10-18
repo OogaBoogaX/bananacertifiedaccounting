@@ -1,39 +1,91 @@
 # Funding plan
 
-**Status:** exploration; no sponsor selected or agreement approved.
+**Status:** Current priorities are bitcoin donation readiness and reducing AI costs. **SPI contact and application are deferred**, as recorded in the [decision log](../governance/decisions.md). Implementation steps remain **Proposed**, and funding routes remain **Potential**. No sponsor selected, agreement approved, application submitted, or funding committed in these records. The retained SPI inquiry is **Draft — not sent**.
 
-**Updated:** October 17, 2026.
+**Updated and official sources checked:** October 17, 2026. Fit and effort below are our assessments, not eligibility decisions by the programs.
 
-Our immediate objective is to fund documented project expenses so volunteers can continue building public software. AI tools account for the current estimated need of $2,500–$5,000 per month, with substantial variation. Future employment is a possibility, not a current commitment.
+## What we are trying to fund
 
-## Initial route
+Cover documented expenses for public software, mainly AI development tools. [The budget](../finance/budget.md) is the single source for the planning estimate, its unknowns, and mixed-use allocation. Paid development would require a separate decision. The team reports that it builds in public and actively teaches people who want to contribute, so they can learn from the work and take part themselves. Public evidence of outcomes is recorded separately in the [project history](project-history.md).
 
-Explore whether [Software in the Public Interest](https://www.spi-inc.org/) can support our work as an associated project. SPI describes an initial informal discussion before a formal application. Acceptance, approved expenses, licensing, and practical payment arrangements remain open questions.
+Planned accounting software would be general-purpose software anyone could use; it is not an existing project or a request to provide private bookkeeping services to members. See the [software brief](../software/README.md).
 
-Fiscal sponsorship would provide a framework for receiving and administering donations; it is not a promise that SPI will fund the projects. We would still need to raise the money.
+## Compare the routes
 
-## Materials
+“Tax-deductible?” below concerns **U.S. federal charitable-contribution deductions**. Other jurisdictions, business-expense deductions and recipient taxes are not assessed here. No qualifying charitable recipient is established for the team's direct support channel. A grant awards resources; a fiscal host administers money we still have to raise. Complimentary tool access may reduce future spending but does not supply treasury funds. [IRS charitable-contribution guidance](https://www.irs.gov/taxtopics/tc506), checked 2026-10-17.
 
-- [Draft inquiry](spi/initial-inquiry.md)
-- [Sponsor fit check and sources](spi/fit-check.md)
-- [Working budget](../finance/budget.md)
-- [Proposed expense policy](../governance/expense-policy.md)
-- [Public organization profile](../organization/profile-README.md)
+| Type | Tax-deductible? | Fee | Fit with us today | Main obstacle | Effort | Source and check date |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Claude for Open Source** — complimentary individual access | N/A; not a donor payment channel | Complimentary base subscription; overages may cost extra | Check individual eligibility | Qualifying contributions, OSI-license and individual requirements | Low | [Program](https://claude.com/contact-sales/claude-for-oss), [terms](https://www.anthropic.com/claude-for-oss-terms); 2026-10-17 |
+| **Codex for Open Source** — complimentary individual access; possible API credits | N/A; not a donor payment channel | Complimentary awarded benefit; scope varies | Worth a concise maintainer application after authorization | Maintainer role and ecosystem impact; discretionary selection | Low | [Program](https://developers.openai.com/community/codex-for-oss), [terms](https://learn.chatgpt.com/docs/codex-for-oss-terms); 2026-10-17 |
+| **GitHub Copilot Pro** — complimentary individual access | N/A; not a donor payment channel | Free for qualifying maintainers | Check each maintainer's eligibility | GitHub determines project popularity; monthly reevaluation | Very low | [Maintainer access](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers); 2026-10-17 |
+| **GitHub Sponsors** — direct organization support | Generally no; no charitable status established here | No GitHub fee on personal-account sponsorships; up to 6% on organization-account sponsorships; host fees additional if used | Optional fiat support alongside the planned bitcoin route | Supported operating region, verified payout/tax setup, authorized recipient | Medium setup; low ongoing | [Eligibility/regions](https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors), [fees/taxes](https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/about-sponsorships-fees-and-taxes); 2026-10-17 |
+| **Own Lightning stack** — direct support | No charitable deduction represented | Node, liquidity, routing and operating costs not itemized | Team reports node launched; donations planned | Custody, receiving configuration and receipt reconciliation unresolved | Medium/high ongoing | [Team update and source findings](#existing-donation-features); 2026-10-17 |
+| **OpenSats General Grant** — grant | N/A to a grant award; not a B.C.A. donation channel | No application fee stated on reviewed page; award terms to confirm | Best grant prospect for a specific Bitcoin deliverable | Proper open-source license, public benefit and impact evidence | Medium | [General Grant and criteria](https://opensats.org/apply); 2026-10-17 |
+| **HRF Bitcoin Development Fund** — grant | N/A to a grant award | No application fee stated on reviewed page; award terms to confirm | Conditional prospect for a real financial-freedom use case | Benefit to people under repression; license terms unspecified in reviewed page | Medium | [BDF program](https://hrf.org/program/financial-freedom/bitcoin-development-fund/); 2026-10-17 |
+| **Open Source Collective (OSC)** — fiscal host | No charitable deduction; U.S. 501(c)(6) | 10% of incoming funds plus processor fees; no setup or recurring fee | First host to evaluate if direct payout/admin becomes a barrier | Recognized licensing, active project, authorized representatives | Medium | [Apply](https://opencollective.com/opensource/apply/intro), [criteria](https://docs.oscollective.org/interested-in-joining-osc/acceptance-criteria), [fees](https://docs.oscollective.org/welcome-and-introduction-to-osc/fees), [tax status](https://docs.oscollective.org/about-osc/official-info-and-docs); 2026-10-17 |
+| **SPI** — fiscal sponsor | Typically yes for eligible U.S. donations accepted by SPI; not confirmed for us | 5% of donations plus attributable transaction/payment fees | Deferred; revisit only for a concrete sponsorship need | Established community, releases/significance, license and recurring AI-cost review | No current work; later inquiry/application effort | [HOWTO](https://www.spi-inc.org/projects/associated-project-howto/), [services](https://www.spi-inc.org/projects/services/); 2026-10-17 |
+| **Software Freedom Conservancy** — fiscal sponsor | Conditional on an accepted charitable arrangement; none here | 10% of processed revenue for new members | Defer | Generally excludes projects under a year old; OSI-approved and DFSG-free license required | High | [Application criteria and fee](https://sfconservancy.org/projects/apply/); 2026-10-17 |
 
-## Next steps
+## Current priorities and Proposed next steps
 
-- [ ] Choose the person who will represent the team in the initial discussion.
-- [ ] Review and authorize sending the inquiry; it has not been sent.
-- [ ] Privately clarify prospective funding amount, timing, recurrence, donor tax jurisdiction, payment method, and whether a sponsor's donation channel is acceptable.
-- [ ] Refine the budget using recent bills without publishing private invoices or account information.
-- [ ] Prepare a project history: releases, public documentation, examples of teaching, and evidence of use.
-- [ ] Confirm which projects and expenses a sponsor could cover, including any limits on shared costs.
-- [ ] Review licensing with a prospective sponsor; do not assume the custom text is legally identical to the Unlicense.
-- [ ] Name financial contacts and agree on an expense approval process.
-- [ ] Record the sponsorship decision and any agreement before publishing charitable-deduction claims or changing donation instructions.
+The October 17 decision sets two immediate priorities. The work below is **Proposed**; it does not appoint custodians, adopt the expense policy, approve spending, or authorize external account changes or messages.
 
-## Decisions still open
+1. **Prepare bitcoin donations and the bitcoin treasury.** Privately establish legal ownership, authorized custody and recovery arrangements for the launched node and receiving funds. Reconcile any historical test receipts, fees and channel capital before establishing an opening balance. Prepare donation wording that identifies the public project purpose and makes no U.S. charitable-deduction claim. Define settlement records, aggregate reporting, and how approved fiat expenses would be paid while the treasury is held in bitcoin. Use the [treasury policy proposal](../governance/expense-policy.md#proposed-bitcoin-and-lightning-receipts-and-treasury-rules) and [existing donation findings](#existing-donation-features). Publication of donation instructions remains a separate authorized step.
+2. **Reduce the AI bill.** Fill in the [private worksheet](../templates/ai-cost-worksheet.md) from recent invoices and usage exports, recording project shares and whether API usage and compute are included. Identify duplicate or unused plans, optional capacity, renewal dates, and candidate reductions for the account owners to approve. Check actual provider caps and alerts. Assess individual eligibility for the tool benefits below using the [project history](project-history.md), including the [licensing constraints](../governance/licensing.md). Prepare applications only where the benefit fits documented project use; submission still needs authorization. Publish a category summary in the [budget](../finance/budget.md), counting only confirmed, usable benefits as reductions to estimated future outlays.
 
-We have not selected a state of incorporation, confirmed an existing legal entity/EIN, selected a sponsor, approved a budget, or appointed financial officers in these records. If independent incorporation becomes necessary, confirm those facts and obtain appropriate advice before filing.
+**Later options:** retain GitHub Sponsors, scoped grants and fiscal hosting as research for a concrete need. A grant proposal should follow a defined public deliverable and attributable costs. A fiat support channel needs an authorized payout recipient and an explicit relationship to the bitcoin treasury. A host should solve an identified donor, grant or administration requirement. None is a current application task; SPI has the specific [revisit conditions below](#spi-inquiry-decision-brief).
 
-If funding is restricted to a particular project, only expenses properly attributable to that project should be charged to that funding. A public project description must accurately reflect the work; educational or research language should describe real activities.
+Record later approvals, awards and agreements in the [decision log](../governance/decisions.md). Independent incorporation is not recommended merely to begin exploring support.
+
+## Individual benefits and how to record them
+
+Anthropic offers six months of Claude Max 20x. One criterion is at least 20 unique external contributors with merged PRs in the preceding 12 months; applicants outside its numerical tracks may explain ecosystem importance. Its terms still require contribution to at least one OSI-approved project, a GitHub account at least two years old, recent public activity, and individual age/residency eligibility. Automated or trivial activity can be discounted. The custom license alone does not establish the license requirement. [Program](https://claude.com/contact-sales/claude-for-oss) and [terms](https://www.anthropic.com/claude-for-oss-terms), checked 2026-10-17.
+
+The [public eligibility check](project-history.md) found upper bounds of **18** external human merged-PR authors for EntropyLab and **5** for Ooga Booga Land over the preceding 12 months. It deduplicates authors, excludes bots and known members/maintainers, and explains private-membership limitations. EntropyLab falls to 17 if the team confirms that one collaborator with merge authority is a maintainer. Both upper bounds are below 20; commit-contributor counts are not substitutes. Snapshot: 2026-10-17. This does not rule out an individual's other qualifying work or discretionary consideration.
+
+OpenAI offers six months of ChatGPT Pro with Codex, with separately reviewed API credits and conditional Codex Security access. Core maintainers can apply; other important ecosystem projects may explain their case. Benefits are personal and non-transferable unless OpenAI agrees otherwise in writing. GitHub offers free Copilot Pro to qualifying maintainers of popular projects, with eligibility checked monthly in personal Copilot settings. Neither is an organization-wide seat entitlement. [OpenAI program](https://developers.openai.com/community/codex-for-oss), [terms](https://learn.chatgpt.com/docs/codex-for-oss-terms), and [GitHub access](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-teachers-and-os-maintainers), checked 2026-10-17.
+
+**Proposed planning record:** keep award evidence, recipient reference, start/end dates, restrictions and displaced cost privately. Publish an aggregate memo of complimentary access and in-kind cost relief. An award to an individual is not automatically a contribution received by the team. Revise the expense-funding **Estimate** only after an award is confirmed and only for the documented project cost it actually replaces:
+
+> revised expense-funding estimate = itemized expense-funding estimate − project costs displaced during the benefit period
+
+Do not enter a free seat's retail value as treasury receipts or a reimbursable expense. Do not count the same saving against both subscriptions and API usage. Extra capacity that replaces no planned purchase reduces nothing. Keep expiration/renewal costs visible; Anthropic's paused paid plan resumes unless cancelled. Distinguish documented costs incurred from payments made; an award does not make an underlying cost estimate actual.
+
+This memo records expected spending reductions, not a financial-statement recognition policy. Any recognition of a noncash contribution depends on the recipient, award terms and applicable reporting framework; it is separate from treasury receipts. U.S. nonprofit standards, for example, address recognized contributed nonfinancial assets separately from contributions of cash. [FASB ASU 2020-07](https://storage.fasb.org/ASU%202020-07.pdf), checked 2026-10-17.
+
+## Direct support setup
+
+GitHub requires a sponsored organization to contribute to open source and legally operate in a [supported region](https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors#supported-regions-for-github-sponsors). Its list includes the U.S., U.K., Canada and many other regions; a worldwide volunteer roster does not prove the recipient qualifies. [Organization onboarding](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-organization) includes bank and tax information, 2FA and review. Confirm those facts privately before choosing a payee; these records establish no legal entity or tax identifier. Checked 2026-10-17.
+
+GitHub supports payout through an **existing** fiscal host, including OSC and SPI. Choose that path during signup; changing from Stripe Connect later requires GitHub Support. It does not confer host membership or bypass host terms. The organization-sponsor fee is up to 3% processing + 3% service = 6%; invoiced billing can remove the 3% card portion. [Host payouts](https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/using-a-fiscal-host-to-receive-github-sponsors-payouts) and [fees/taxes](https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/about-sponsorships-fees-and-taxes), checked 2026-10-17.
+
+## Grant and host boundaries
+
+OpenSats requires a proper open-source license and openly licensed educational materials, with Bitcoin benefit and transparent work. Its General Grant is available worldwide. [RED reimbursement](https://opensats.org/apply/red) is narrowly for actual Bitcoin security red-teaming, not routine AI development or a general project budget. HRF accepts proposals year-round for Bitcoin/freedom-technology work serving people under repression; its reviewed page does not specify an approved-license list, and its linked form did not expose readable terms in this review. Confirm license terms before relying on eligibility. [OpenSats](https://opensats.org/apply) and [HRF](https://hrf.org/program/financial-freedom/bitcoin-development-fund/), checked 2026-10-17.
+
+[Brink](https://brink.dev/programs) is another verified Bitcoin grantmaker, but its grants target established developers working full-time with a security-first contribution record and public deliverables. Its program page does not name a license list. This is a poor match for the current expense-only request; revisit only if the scope changes and confirm license terms then. Checked 2026-10-17.
+
+OSC evaluates activity, impact, maintainer authority and licensing against recognized open-source standards. It requires an organization repository and encourages shared administration; no minimum project age is stated in its [criteria](https://docs.oscollective.org/interested-in-joining-osc/acceptance-criteria). Its [expense rules](https://docs.oscollective.org/for-hosted-member-projects/spending-money-and-getting-paid/expense-policies-and-limitations) include project software subscriptions, but exclude pre-hosting costs and require itemization/admin approval. Mixed-use AI arrangements still need host confirmation. Checked 2026-10-17.
+
+**Proposed simplification if OSC is selected:** use its [public budget and expense workflow](https://oscollective.org/projects/) as the authoritative record for funds it holds. Keep our [monthly report](../templates/monthly-report.md) for outcomes, budget variance, in-kind relief and off-host reconciliation; keep the [expense policy](../governance/expense-policy.md) for local approvals, allocation, conflicts and Lightning custody. Link to host records rather than maintain a duplicate ledger. Nothing is deleted now. Service checked 2026-10-17.
+
+## SPI inquiry decision brief
+
+**Decision, October 17, 2026: defer both the informal inquiry and any formal SPI application.** Focus current work on bitcoin donation readiness and reducing AI costs. See the [decision log](../governance/decisions.md). This replaces the earlier recommendation to send an inquiry now.
+
+The team has not identified an immediate need that SPI must resolve. Keep the [draft](spi/initial-inquiry.md) as **Draft — not sent**, with no scheduled follow-up. SPI remains a Potential later option. The [fit check](spi/fit-check.md) retains the research; licensing, AI expense eligibility and bitcoin custody compatibility remain unresolved.
+
+**Proposed revisit conditions:** a prospective donor needs a charitable giving route, a grant requires a fiscal host, or receipt/payment administration becomes burdensome enough that hosting would solve a real problem. If one arises, reassess SPI's fit, refresh the facts and draft, and obtain explicit authorization before contacting it. A trigger is a reason to reconsider, not automatic permission to send.
+
+## Existing donation features
+
+**Team update, October 17, 2026:** a Lightning node has launched; the team plans to accept bitcoin donations from individual supporters and interested parties, and intends to hold its treasury in bitcoin. These are team-supplied operational facts and intentions, not evidence of a received gift, reconciled balance, approved custody policy or verified public donation endpoint.
+
+Read-only source review, checked 2026-10-17, found a technical Lightning donation path in [Banana Pay Server's architecture](https://github.com/OogaBoogaX/bananapayserver/blob/965bfc0b966642ff261cffc5b4e8a15ac15fe830/docs/architecture.md): a relay creates/views invoices for the operator-configured BTCPay donations store, whose Lightning payments settle to its connected LND node. The Worker/D1 event feed publishes payment events; it is not the wallet or an accounting ledger.
+
+The [README](https://github.com/OogaBoogaX/bananapayserver/blob/965bfc0b966642ff261cffc5b4e8a15ac15fe830/README.md) describes pre-alpha/signet staging, while [production notes](https://github.com/OogaBoogaX/bananapayserver/blob/965bfc0b966642ff261cffc5b4e8a15ac15fe830/docs/production.md) describe a production launch and test donations imported into D1. The team's launch update clarifies intent and node status, but does not reconcile the source-document conflict, identify the custodian or show whether historical events represent real gifts. No payments or live-service probes were made. The [project history](project-history.md) records evidence and limitations.
+
+**Proposed:** reconcile deployment and historical receipt records privately before publishing donation instructions. Identify the authorized custodian, receiving project, recovery/exit controls and reporting process under the [expense policy](../governance/expense-policy.md). Make no U.S. charitable-deduction claim for direct support; no qualifying charitable recipient or sponsor-held channel has been established. Clarify separately whether Lightning Foundry node funds belong to volunteers or the project and whether routing fees have been earned. Do not infer donation receipts from channel capacity, routing volume or imported payment events. Tax classification of actual receipts remains a separate question.
+
+A bitcoin treasury adds a host-fit question: SPI's [published donation methods](https://www.spi-inc.org/donations/) do not list cryptocurrency, and OSC's [expense rules](https://docs.oscollective.org/for-hosted-member-projects/spending-money-and-getting-paid/expense-policies-and-limitations) say its funds are held in USD. Neither source establishes that a host would hold this treasury in bitcoin. Before choosing either, clarify acceptance/conversion and whether a separately controlled bitcoin treasury can coexist with host-held funds. Do not promise bitcoin retention on a host's behalf. Checked 2026-10-17.

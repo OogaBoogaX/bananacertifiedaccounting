@@ -1,0 +1,399 @@
+FOLLOW-UP PROMPT — BANANA CERTIFIED ACCOUNTING: ACT ON THE OCTOBER 17 REVIEW
+Prepared for Astra
+
+ABOUT THIS FILE (for maintainers)
+  Status:   handoff prompt, written October 17, 2026. Not executed yet.
+  Applies:  the Banana Certified Accounting repository only
+            (OogaBoogaX/bananacertifiedaccounting, default branch "rock").
+  Before handing off: fill in section 0. Do not paste private information
+            (invoices, account details, contributor countries, donor names)
+            into this file; give those to Astra through restricted channels.
+
+------------------------------------------------------------------------------
+0. TEAM DECISIONS — FILL IN BEFORE HANDING OFF
+------------------------------------------------------------------------------
+
+Astra: treat anything marked UNDECIDED as not decided. For those items, write
+a recommendation and a decision brief. Do not act as if the decision has been
+made.
+
+  License direction:      UNDECIDED
+                          (other choices: "adopt <SPDX id> as the binding
+                          license, keep the Ooga Booga text as a summary" /
+                          "dual-license" / "keep as is")
+  Funding strategy:       UNDECIDED  (Astra proposes one; see 4A)
+  SPI inquiry:            UNDECIDED  (send now / defer / drop)
+  Git:                    leave changes uncommitted for review
+                          (other choices: "commit locally in focused commits" /
+                          "commit and open a PR")
+  External actions:       NONE AUTHORIZED
+                          (examples needing explicit permission: editing GitHub
+                          repo descriptions, copying the profile to
+                          OogaBoogaX/.github, applying to any program, sending
+                          any email, changing other repositories)
+  Facts the team supplies: none yet
+                          (examples: whether Lightning donations are live, the
+                          list of AI providers and plans, whether API usage and
+                          compute are inside the $2,500–$5,000 estimate)
+
+------------------------------------------------------------------------------
+1. CONTEXT
+------------------------------------------------------------------------------
+
+Banana Certified Accounting (B.C.A.) is Team Ooga Booga's home for funding
+plans, project budgets, proposed expense rules, and public financial updates.
+Keep the motto and the personality:
+
+  Count bananas. Keep receipts. Build in public.
+
+Team Ooga Booga is a worldwide volunteer group building free software, mostly
+Bitcoin-related. The immediate goal is to cover project expenses, mainly AI
+development tools. The team estimates these at $2,500–$5,000 per month. That
+is a PLANNING ESTIMATE: it is not itemized, not approved, and not actual
+spending.
+
+The repository will probably also host open-source accounting software that
+works for the organization and for the individuals in it. No code exists yet.
+Treat the software as planned, not as an existing project; see 4K.
+
+A review on October 17, 2026 restructured the repository. Its changes may still
+be uncommitted. If so, treat the current working tree as your baseline:
+preserve it, do not revert it, and do not discard other local changes. Start
+by reading every authored file:
+
+  README.md, LICENSE, .gitignore
+  funding/README.md, funding/spi/initial-inquiry.md, funding/spi/fit-check.md
+  finance/budget.md
+  governance/expense-policy.md, governance/decisions.md
+  templates/monthly-report.md
+  organization/README.md, organization/profile-README.md
+  prompts/  (handoff prompts; not accounting records)
+
+The README defines the status labels (Estimate, Actual, Draft/Proposed,
+Approved/Adopted, Potential, Committed, Received, Not sent/Sent) and which
+document wins when two disagree. Use the same labels.
+
+------------------------------------------------------------------------------
+2. GROUND RULES
+------------------------------------------------------------------------------
+
+- Do not invent facts. That includes sponsor acceptance, legal status, an EIN,
+  officers, donor commitments, tax deductibility, approval thresholds, owners,
+  and actual costs. Unresolved facts stay explicitly unresolved.
+- Before writing any external fact (program terms, fees, eligibility, license
+  approvals), check it against the official source. Cite the source and record
+  the date you checked it. Treat blogs and aggregators as leads only.
+- Do not send, publish, apply, sign up, or change any external system or other
+  repository unless section 0 authorizes that exact action. You MAY inspect
+  public OogaBoogaX repositories read-only (gh CLI or GitHub API) to establish
+  facts.
+- Keep private material out of the repository: invoices, donor identities,
+  bank or wallet details, credentials, tax documents, contributor countries,
+  and private correspondence. The .gitignore is not access control.
+- Never put real financial data (the team's or any individual's) in code,
+  test fixtures, examples, or issues. Use synthetic data only.
+- Label all new policy language "Proposed". Do not appoint people or approve
+  spending.
+- Stay proportionate to a small volunteer team that currently holds no funds.
+  Add a file only when it resolves a concrete gap.
+- Keep the writing approachable and plain. The playful voice is welcome, but
+  never at the cost of clarity about money.
+
+------------------------------------------------------------------------------
+3. YOU ARE INVITED TO FIND BETTER OPTIONS
+------------------------------------------------------------------------------
+
+The team is not attached to the current approach. That includes SPI-first
+sponsorship, the custom license, the document set, and the homegrown report
+and policy machinery. Where a better option exists, make the case with sources.
+
+- If the change is documentation-level and reversible, implement it and label
+  it Proposed.
+- If it is a real decision (license, funding route, spending, outside
+  communication), write a short decision brief instead. The brief gives the
+  options, trade-offs, sources, and your recommendation.
+
+Prefer whatever gets the team the most real support for the least
+bureaucracy.
+
+------------------------------------------------------------------------------
+4. WORK ITEMS (each one addresses a finding from the October 17 review)
+------------------------------------------------------------------------------
+
+A. FUNDING STRATEGY: THE PROJECTS ARE YOUNG
+
+   Finding: the project repositories were created between August 25 and
+   October 1, 2026, and only EntropyLab has releases (v1.0.0 on October 12,
+   2026). That weakens SPI's "substance" test today, and Software Freedom
+   Conservancy generally declines projects under a year old.
+
+   Research and verify these alternatives, then propose a phased strategy in
+   funding/README.md:
+
+   1. Reduce the bill before raising money. Look at AI vendors' open-source
+      programs:
+        - Anthropic "Claude for Open Source"
+          (claude.com/contact-sales/claude-for-oss). Six months of Claude Max.
+          One listed criterion: a repo with 20 or more unique external
+          contributors with merged PRs in the last 12 months. Non-qualifiers
+          are invited to apply anyway.
+        - OpenAI "Codex for Open Source"
+          (developers.openai.com/codex/codex-for-oss). Six months of ChatGPT
+          Pro, plus possible API credits.
+        - GitHub Copilot access for maintainers of popular projects. Verify
+          the current terms on GitHub's own pages.
+      These benefits go to individuals and are time-limited. Show how they
+      would be recorded: as an in-kind reduction of the estimate, not as
+      income.
+   2. Direct, non-deductible support now: GitHub Sponsors for the
+      organization (check fees, supported payout regions, and fiscal-host
+      payouts). Also Lightning donations through the team's own stack, if 4D
+      shows that is viable.
+   3. Grants: OpenSats General Grant, and any other Bitcoin-focused grant
+      programs you can verify. Note each program's license requirements.
+   4. Fiscal sponsorship:
+        - Open Source Collective. Its apply page states a 10% fee. Verify its
+          acceptance criteria, its tax status, and whether donations are
+          charitably deductible.
+        - SPI: 5% overhead and U.S.-deductible, but likely a better fit once
+          the projects are more established.
+
+   Deliver a comparison table with these columns: type, tax-deductible?, fee,
+   fit with us today, main obstacle, effort, source and check date. Give a
+   recommended sequence, labeled Proposed.
+
+   Eligibility check (read-only): count the unique external contributors with
+   merged PRs in the last 12 months for EntropyLab and Ooga Booga Land.
+   Exclude bots, and exclude people who are maintainers or org members. State
+   the method and the date. Do not apply to anything.
+
+B. SPI INQUIRY
+
+   Recommend send now, defer, or drop, with reasons. An informal discussion
+   costs little and would give authoritative answers on licensing and on
+   recurring AI costs, but the projects are young. Update the draft so it
+   fits the recommendation and the license direction in section 0. Tighten
+   the email body to about 300 words; it is about 400 now. It stays
+   "Draft — not sent".
+
+C. LICENSING DECISION BRIEF
+
+   Finding: every project uses the custom "Ooga Booga License," which GitHub
+   detects as "Other". It is likely an obstacle for:
+     - Software Freedom Conservancy (requires OSI-approved and DFSG-free);
+     - OpenSats (requires "a proper open-source license");
+     - possibly SPI (its IP policy prefers GPL-compatible licensing).
+
+   Write governance/licensing.md as a decision brief. It should cover:
+     - what each funder requires, with sources;
+     - the options:
+         keep as is;
+         dual-license;
+         adopt a standard license and keep the Ooga Booga text as a
+           plain-language summary;
+     - candidate licenses. Verified on October 17, 2026: 0BSD, MIT-0, the
+       Unlicense, MIT, and Apache-2.0 are OSI-approved; CC0-1.0 is not. Weigh
+       how closely each matches "No ask. No pay. No club.": 0BSD and MIT-0
+       impose no conditions; the Unlicense is closest to the team's stated
+       intent but relies on a public-domain dedication; MIT requires
+       attribution; Apache-2.0 adds a patent grant;
+     - how existing contributions would be covered (GitHub lists dozens of
+       contributors), and contribution terms going forward;
+     - a migration checklist across OogaBoogaX repositories.
+
+   This matters more because B.C.A. will likely ship accounting software that
+   outside people and organizations adopt; many adopters and package
+   registries expect a recognized license.
+
+   Recommend an option and note that informed advice should be obtained. Do
+   not claim legal equivalence. Change LICENSE only if section 0 records a
+   decision. If it does, keep the Ooga Booga text in the repository as a
+   summary and add a decision-log entry citing the team's decision.
+
+D. LIGHTNING DONATIONS AND LIGHTNING ACTIVITY
+
+   Finding: Banana Pay Server's GitHub description mentions Lightning
+   donations for Ooga Booga Land. The records do not say whether a donation
+   channel is live, who controls the receiving wallet, or how gifts are
+   recorded. Lightning Foundry concerns routing nodes, which may earn fees
+   and hold funds.
+
+   From public source and docs only, describe what the donation feature does
+   and where funds would go. Do not make test payments or probe live
+   services. Update funding/README.md, "Existing donation features".
+
+   Draft a Proposed section of the expense policy for Bitcoin/Lightning
+   receipts. It should cover custody, recording, aggregate public reporting,
+   conversion, and the fact that such gifts are not deductible. Add an
+   open-questions list on node funds and routing income.
+
+E. ITEMIZING THE ESTIMATE
+
+   Finding: the $2,500–$5,000 figure is not itemized, and much of it may be
+   personal subscriptions also used for project work.
+
+   Add a private-worksheet template, for example
+   templates/ai-cost-worksheet.csv. Its columns should match the line-item
+   worksheet in finance/budget.md. Include instructions to fill it in only
+   under private/ (gitignored) and to publish only the summary. Add brief
+   guidance on provider spending caps and alerts.
+
+   Do not invent providers or amounts. If section 0 supplies facts, apply
+   them, labeled Estimate or Actual.
+
+F. MATURITY EVIDENCE
+
+   Create funding/project-history.md from public GitHub data. For each
+   project, record:
+     - creation date;
+     - releases;
+     - human contributors versus bots;
+     - documentation;
+     - notable milestones;
+     - verifiable evidence of use or teaching, with links.
+
+   Date the snapshot, and do not inflate anything. This one file should
+   support every application route in 4A. Update the contributor counts in
+   funding/spi/fit-check.md (currently 36 for EntropyLab and 19 for Ooga
+   Booga Land, possibly including automated accounts).
+
+G. ORGANIZATION PROFILE AND GITHUB METADATA
+
+   Findings:
+     - the published profile in OogaBoogaX/.github no longer matches
+       organization/profile-README.md;
+     - the GitHub description of this repository reads "Accounting
+       documentation and software for OogaBoogaX and its members". The
+       software part is intended (see 4K); the README is what is missing it.
+       "For its members" could read as building private services for
+       insiders, so prefer wording that presents general-purpose open-source
+       software anyone can use, the team included;
+     - Ooga Arcade and Oogatron are public but not on the profile, and
+       Oogatron has no license file.
+
+   Recommend whether to list Ooga Arcade and Oogatron. Propose description
+   text for this repository that covers both the records and the planned
+   software, and update the README and profile wording to match, labeling the
+   software as planned. Add a short "Pending external
+   updates" list to organization/README.md covering the profile copy, the
+   repository description, and the Oogatron license, with each item marked
+   "needs authorization". Do the external actions only if section 0
+   authorizes them.
+
+H. HOW DECISIONS GET MADE
+
+   Finding: the decision log asks "Decided by" and "how", but no
+   decision-making process is defined.
+
+   Propose a lightweight process, for example a pull request approved by a
+   stated number of active maintainers, with a higher bar for money, license,
+   and outside commitments. Label it Proposed, put it in
+   governance/decisions.md, and use roles, not names.
+
+I. PROMPTS FOLDER HYGIENE
+
+   Finding: prompts/ is untracked. prompts/bca-cave-opus-5.5.txt contains the
+   maintainer's absolute local paths, and it concerns the Ooga Booga Land
+   application, not accounting.
+
+   Generalize those paths to placeholders, keeping the prompt's requirements
+   intact. Recommend where prompts should live: tracked here, kept local via
+   .gitignore, or moved to the application repository by the team. Do not
+   move files to other repositories.
+
+J. SIMPLIFY WHERE A BETTER OPTION REPLACES WORK
+
+   If your recommended route includes a fiscal host with a public ledger and
+   expense workflow (for example Open Source Collective), propose how
+   templates/monthly-report.md and governance/expense-policy.md would shrink
+   to supplements of the host's system. Label it Proposed; do not delete them
+   yet.
+
+   Throughout, remove repetition that has crept back in, keep
+   finance/budget.md as the single source for budget figures, and keep the
+   README status table accurate.
+
+K. PREPARE FOR THE ACCOUNTING SOFTWARE (DO NOT BUILD IT)
+
+   Context: B.C.A. will probably also become open-source accounting software
+   for the organization and for its individual members. Do not write
+   application code or scaffold a project. Instead, write a short Proposed
+   brief, for example software/README.md or a section of the README, that
+   answers the following.
+
+   - Repository structure. Should public financial records and software
+     share this repository, or should one of them move? Weigh contributor
+     traffic, CI, review norms (code pull requests vs. policy and money
+     decisions), and the risk of real financial data leaking into fixtures.
+     Recommend an option.
+   - .gitignore. The current patterns `private/`, `receipts/` and
+     `invoices/` match at any depth, so a source module or test-fixture
+     directory named invoices/ or receipts/ would be silently ignored. Also,
+     `.env.*` ignores `.env.example`. Propose root-anchored patterns (for
+     example /private/) with a rule that private files live only there, plus
+     a `!.env.example` exception. Apply the change only when software work
+     starts in this repository, or when section 0 says so.
+   - Build on what exists. Survey existing open-source accounting tools and
+     formats that the software could use or interoperate with instead of
+     reinventing them: plain-text accounting (Beancount, hledger, Ledger),
+     their tooling, and open-source tools for Bitcoin and Lightning
+     accounting. Note each one's license, multi-currency or sats support,
+     privacy model, and maintenance status, with sources. Recommend what to
+     build only where there is a real gap.
+   - Dogfooding. The team's own books could be the first user: the monthly
+     report template, the budget worksheet, and the expense records could
+     become the software's first output and input formats. Sketch how,
+     briefly.
+   - Privacy and safety. Personal financial data calls for local-first
+     storage, no telemetry by default, synthetic fixtures only, and a
+     security-reporting route once code exists.
+   - Name and disclaimers. "Banana Certified" is a joke, not a professional
+     certification. Propose a short disclaimer for when software ships: no
+     professional accounting certification is claimed, and the software is
+     not tax, legal, or financial advice.
+   - Funding framing. Describe the software as general-purpose open source
+     anyone can use. Do not describe funded work as bookkeeping services for
+     members, because sponsors and grantors generally fund public benefit.
+     Note how this affects 4A. Do not list the software as an existing
+     project in the SPI inquiry or other applications until it exists.
+
+------------------------------------------------------------------------------
+5. VALIDATION
+------------------------------------------------------------------------------
+
+Run document checks, not application tests:
+
+  - Every relative link and #anchor resolves. Test your checker with a
+    deliberately broken link first.
+  - External links return success.
+  - Markdown tables have consistent columns.
+  - Recompute every figure you introduce or change, and show the arithmetic.
+  - Status labels match the README definitions. Nothing estimated reads as
+    actual, nothing proposed reads as approved, and nothing potential reads
+    as committed.
+  - Every external fact has a source and a check date.
+  - grep the diff for private material: emails, wallet addresses, invoice
+    numbers, local paths.
+  - LICENSE is unchanged unless section 0 records a license decision.
+
+------------------------------------------------------------------------------
+6. HANDOFF
+------------------------------------------------------------------------------
+
+Finish with:
+
+  - The substantive changes, by file.
+  - The checks you actually ran and their results.
+  - The decisions the team needs to make. For each one, give your recommended
+    option and the main trade-off.
+  - External actions you prepared but did not take, with the exact text or
+    steps needed.
+  - Information only the team can compile privately, such as contributor
+    countries (relevant to SPI's embargo rules), billing owners, and
+    invoices. Say which document each item unblocks.
+  - Anything you could not verify, stated plainly.
+  - A short, prioritized list of next actions.
+
+The goal is a repository that helps the team get real support quickly (fewer
+bills, simple honest ways to give, then grants and sponsorship as the projects
+mature), while keeping every banana counted and every receipt kept.

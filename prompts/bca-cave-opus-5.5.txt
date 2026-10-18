@@ -1,0 +1,406 @@
+IMPLEMENTATION PROMPT — B.C.A. CAVE IN OOGA BOOGA LAND
+Prepared for Opus 5.5
+
+ABOUT THIS FILE (for maintainers; keep it when handing the prompt to an agent)
+  Status:   reusable handoff prompt. Not executed from this repository.
+  Applies:  the Ooga Booga Land application checkout only (oogaboogaland-dev).
+  Does not: authorize any change to Banana Certified Accounting's funding
+            plans, budget, policies, reports, profile, or decision log.
+  Accuracy: the implementation notes describe the application checkout that
+            was inspected when the prompt was written. They were not
+            re-verified against the application when this copy was reviewed
+            (October 17, 2026). The implementer must check them against
+            current source.
+  Privacy:  checkout paths below are placeholders. Resolve them locally; do
+            not publish private local paths or financial information.
+
+You are implementing a complete new cave for Banana Certified Accounting (B.C.A.) in the existing Ooga Booga Land application. Build the feature in the actual project, integrating it with the existing world, characters, rendering, navigation, and contributor activity. Deliver working source changes, not a concept, mockup, standalone demo, or implementation plan.
+
+The central visual idea is this: ordinary Oogaboogaland gorillas approach the B.C.A. cave on their knuckles, cross the same kind of living, transparent veil used at EntropyLab, straighten into an upright posture as they cross, and emerge inside wearing proper accountants' suits. They walk to two desks, settle into chairs behind them, and work at computers and physical abacuses. The transformation and the subsequent work must be easy to see and delightful to watch. These are still the same recognizable gorillas.
+
+Make reasonable implementation and artistic decisions without stopping for routine questions. Read the current source before editing; the implementation notes below describe the checkout inspected for this prompt and must be checked against the version you receive. Preserve unrelated work. Finish the complete cave and behavior, with honest verification reporting.
+
+1. PROJECT CONTEXT AND SOURCES OF TRUTH
+
+Implementation repository:
+  <OOGA_BOOGA_LAND_CHECKOUT>
+
+B.C.A. identity and documentation repository:
+  <BCA_CHECKOUT>
+
+Resolve those placeholders to the corresponding local repository checkouts before starting. Every change belongs in oogaboogaland-dev, the local Ooga Booga Land development checkout. The accounting repository is a read-only brand and context reference: do not edit, add, or delete anything in it. Any task in this prompt that mentions a README, docs, tests, or testing policy refers to the application repository.
+
+First read the application repository's AGENTS.md. Then inspect the relevant source, particularly:
+
+  src/js/caves.js
+  src/js/scene-hub.js
+  src/js/hub-models.js
+  src/js/lab-phase.js
+  src/js/agent.js
+  src/js/clankers.js
+  src/js/crew.js
+  src/js/dressing.js
+  src/js/models.js
+  src/js/terrain.js
+  src/js/contributors.js
+  src/js/activity-repos.js
+  src/js/routes.js
+  src/js/director.js
+  src/js/npc-sync.js
+  src/js/remote-players.js
+  src/js/poker-models.js
+  src/index.html
+  docs/activity-contract.md
+  docs/gorilla-behavior.md
+
+Read the B.C.A. README and organization/profile-README.md for identity. The name is “Banana Certified Accounting.” Its existing motto is:
+
+  Count bananas. Keep receipts. Build in public.
+
+B.C.A. is the tribe's home for funding plans, project budgets, proposed expense rules, and public financial updates. Express that through the setting. Do not invent financial balances, donor records, sponsor acceptance, or accounting credentials. Decorative computer graphics should look like simple ledgers; they are scenery, not a claimed live financial dashboard. Signs, tooltips, route descriptions, and docs must not state or imply real figures, a fiscal sponsor, tax-deductible giving, or donation instructions. The team has none confirmed; see the accounting repository's README for current status.
+
+2. FOLLOW THE REAL ENTROPYLAB IMPLEMENTATION
+
+The visible EntropyLab cave is a physical, walk-in interior inside the HUB. The public /entropylab route selects scene “hub,” place “lab.” The separate scene-lab.js is a debug-only scene and is not the primary model for this feature.
+
+Build B.C.A. as another integrated hub cave. A visitor should be able to watch gorillas approach from the island, see them cross the veil, and see them working in the actual room beyond. Walking into B.C.A. should preserve world continuity. Do not hide the transformation behind a fade, modal, loading screen, or replacement scene.
+
+Use the existing stone mouth, terrain cavity, shared cave facade language, cave visibility/cutaway behavior, and hub camera. Build the room into the real available cave volume. Do not add a detached office, separate website, or flat illustration pretending to be a room.
+
+3. LOCATION, NAME, ROUTING, AND DISCOVERABILITY
+
+Use the existing unused c10 mouth at 10 o'clock, immediately beside EntropyLab at c11. In the inspected checkout c10 and c9 are unassigned, dark caves. c10 is the intended choice. If it has since acquired real content, preserve that content and use the nearest genuinely available slot, updating every related reference consistently.
+
+The exterior sign should read “B.C.A.” in the same substantial carved/pixel lettering and wood-and-metal sign construction used by neighboring caves. Include “Banana Certified Accounting” on a smaller appropriate plaque, readable board, or tooltip so visitors can discover the full name. A banana-and-ledger or banana-and-abacus emblem should make the theme readable at a distance.
+
+Suggested identifiers:
+  place: bca
+  theme: bca
+  repository: oogaboogax/bananacertifiedaccounting
+              (GitHub's display form is OogaBoogaX/bananacertifiedaccounting;
+              use whichever casing the activity normalizer and existing
+              repo keys use)
+  route: /bca
+  route scene: hub
+  route place: bca
+
+Important registration trap: director.js seals any slot whose non-null scene is absent from BL.scenes. Do not simply set scene: “bca” without a real scene, and do not create a dummy scene to satisfy that guard.
+
+A small, appropriate in-hub integration is an open slot with scene: null and explicit place: “bca,” theme: “bca,” repo, and glowOnly: true. The existing workCave predicate accepts a repo-bearing open slot. If using this approach, complete all of its consumers: buildMouth, cave click/entry handling, presets, navigate, tooltips, debug cave aliases, and any related routing or position labels. A place-based cave action should select the hub's B.C.A. view without calling the scene transition function with null.
+
+Provide a useful B.C.A. navigation preset and a /bca route that frames the entrance, sign, and office activity. Preserve normal walking access and Back/Forward behavior. From a local built file, the corresponding hash route must follow the application's existing routing system. Use existing HUD patterns only where needed.
+
+The current route system permits omitting the image field and inheriting the home preview card. Use that valid fallback unless a B.C.A. card already exists. Do not reference a nonexistent card or run browser card generation under the default “wait” verification mode.
+
+4. ART DIRECTION: A SMALL ACCOUNTING OFFICE BUILT BY THIS TRIBE
+
+Maintain the exact visual family of the existing caves:
+
+  - Chunky procedural geometry, voxel gorillas, simple readable silhouettes.
+  - Rough stone surrounding a deliberately furnished interior.
+  - Timber beams, substantial wooden furniture, dark metal brackets, rope details,
+    a little hanging greenery, and the established cave-mouth proportions.
+  - Warm practical lantern light, restrained emissive details, and shadows that
+    make the interior cozy while keeping the workers visible.
+  - The same scale, polygon density, pixel lettering, and level of playful detail
+    as EntropyLab and the other established caves.
+
+Give B.C.A. its own restrained palette: walnut/brown timber, charcoal and navy suits, ivory paper, muted green ledger/computer accents, a little brass, and banana yellow as the accent. Reuse existing palette values where they fit.
+
+The joke is that serious accountants are gorillas doing banana bookkeeping in a cave. Let that contrast carry the humor. Keep the room competent, cozy, handmade, and slightly absurd. Avoid a pristine corporate office, photorealism, chrome-and-glass luxury, casino styling, neon overload, or excessive decorative clutter.
+
+Use BL.dressing for set dressing, including any new reusable kit pieces. Use the existing model-building and interior helpers for functional furniture and articulated equipment. Do not introduce an unrelated art pipeline or a pile of one-off unregistered scene decorations.
+
+5. EXTERIOR AND VEIL
+
+Retain the common stone rim and neighboring cave language: matching sign placement, lantern posts, an overhead light cable, modest vines, and a clear approach path. Add only a few accounting cues, such as a small ledger/receipt prop and the abacus/banana emblem. Keep the threshold wide and uncluttered.
+
+Use BL.labPhase.create or the existing shared phase implementation as the basis of the veil. EntropyLab's veil is a transparent, non-reflective plane with glyph crests, ripples, and body intersection contours. Preserve that behavior and quality. A very restrained warm-green or pale-gold tint can distinguish B.C.A.; keep the office legible through it.
+
+The veil must look like a boundary in the world, not an opaque magic door. Gorilla crossings should cause the established contact/ripple response. Use the same physical boundary for visual contact, workplace transition, and clothing clipping, including the actual mouth rotation and floor offset.
+
+Keep the project's existing banana work-shot/absorption semantics consistent. The new office does not introduce a new donation transaction, tally, or currency system.
+
+6. ROOM LAYOUT: EXACTLY TWO COMPLETE WORKSTATIONS
+
+Build two substantial desks, each with:
+
+  - One properly scaled chair with a seat and back that support a seated gorilla.
+  - One chunky computer monitor with a small stand/base and keyboard.
+  - One recognizable physical abacus with a wooden/brass frame, several rods,
+    and individually readable beads that can slide along the rods.
+  - A restrained paper ledger or receipt stack, and an optional small desk lamp.
+
+Both desks need BOTH a computer and an abacus. Do not substitute one computer desk and one abacus desk. Do not place a token abacus on a shelf while all the work happens at computers.
+
+Compose the desks in the rear half or along opposing sides of the room, with a clear central aisle. Angle them slightly as needed so the entrance view reveals the suited torsos, seated bodies, and hand activity. The computers should face their users; balance this with a three-quarter view that makes the office understandable to a visitor. Keep monitors low/offset enough that they do not hide the gorillas' faces and the entire transformation payoff.
+
+The first useful B.C.A. view should communicate all of this without explanation: an open cave, a visible veil, two accountant workstations, and gorillas working behind the desks. Visitors can move closer to inspect screens and beads.
+
+Size furniture and routes from the actual rig and room bounds. Do not choose tiny desks and shrink gorillas to fit them. Allow for the widest relevant body, upright shoulders, turning, bent knees, forearms, chair backs, and the full sit/stand transition. Keep a walkable path to each chair and a separate safe place to wait when both stations are occupied.
+
+Place a small rear/side plaque with the B.C.A. motto if it fits without clutter. A few shelves of ledgers and receipt bundles may add context. Keep the focus on the two working gorillas. Do not build a giant accounting headquarters, vault maze, third workstation, or unrelated feature area.
+
+7. THE GORILLAS MUST REMAIN THE SAME CHARACTERS
+
+Use the existing companion gorillas managed by BL.clankers and built from BL.agent. Preserve the owner, root identity, scale, distinctive fur/features, health, possession state, and contributor relationship through the entire approach, transformation, work, and exit.
+
+Do not spawn a replacement dressed actor at the threshold, teleport the original away, duplicate a contributor, or create a second independent crew population. The poker room's suited gorillas are useful clothing construction references, not a workforce to copy into this room.
+
+Connect B.C.A. assignments to the existing repository activity system using oogaboogax/bananacertifiedaccounting. Preserve real contribution age and working/chilling/sleeping rules. Work and clothing should not change just because an unrelated contributor happens to be active.
+
+If no eligible contributors are working, retain truthful activity behavior. Provide a documented debug fixture using named existing contributors so the complete two-worker scene is easy to inspect without falsifying production activity or adding imaginary contributors. A “bca” cave alias should work alongside the canonical repo and slot ID.
+
+8. CROSSING CHOREOGRAPHY AND ACCOUNTANT SUITS
+
+The entrance sequence is the visual centerpiece:
+
+  A. Outside: the gorilla approaches using its established ordinary outdoor gait
+     and appearance. Its accountant suit is not already visible down the path.
+
+  B. At the boundary: the veil responds to the body. As the gorilla physically
+     crosses, its posture rises smoothly from knuckle-walking into the existing
+     upright family of poses. Its accountant clothing becomes visible on the
+     interior side of that same boundary.
+
+  C. Inside: the gorilla finishes upright, fully suited, and continues naturally
+     toward its assigned workstation. Preserve its position and gait continuity.
+
+  D. On exit: the process reverses at the veil. The gorilla returns to its normal
+     outdoor appearance and locomotion as it crosses back out.
+
+Tie clothing reveal to world-space position, not a timer started far outside or mere work assignment. Reuse/generalize the complementary clipping approach used by the existing lab coat. The effect should still make sense when a gorilla stops halfway through, reverses direction, or crosses slowly. Avoid a full-body pop, double body, lingering suit outdoors, disappearing limbs, and repeated flicker at the threshold.
+
+The posture transition can use a short damped blend tied to crossing progress, but must keep feet/support stable and must not propel the body through the door. Keep the camera under user control; the crossing is not a forced cinematic.
+
+Suit design should read as a conventional accountant's business suit at normal game distance:
+
+  - Charcoal or navy jacket with a clear lapel silhouette.
+  - Light cream/white shirt front and collar.
+  - A simple visible tie, perhaps muted burgundy, dark green, or banana gold.
+  - Matching trousers and restrained dark shoes where the rig supports them.
+  - Small shirt cuffs at the wrists; optional modest belt or pocket detail.
+
+Keep faces, ears, hands, gorilla proportions, and recognizable character details exposed. Choose two or three deterministic, restrained suit colorways keyed to existing identity so neighboring accountants need not look identical. Do not randomize clothing every frame or visit.
+
+Clothing must follow the actual articulated torso, arms, hips, and legs through walking and seated work. No root-mounted rigid suit shell, hovering sleeves, detached cuffs, or trousers that remain straight while knees bend. Inspect poker-models.js for its torso jacket, arm sleeves, cuffs, shirt, and tie as a style/attachment precedent. Extract or recreate only the lightweight reusable pieces needed; do not load the poker game to obtain a suit.
+
+Retain EntropyLab's own lab coat, Matrix appearance, Factory behavior, and existing override precedence. B.C.A. attire is a location/role-specific variation, not a global replacement for all gorillas.
+
+9. CHAIR ARRIVAL AND A REAL SEATED WORK POSE
+
+A gorilla must visibly travel from the veil to a reserved chair. Give the workstation a clear approach point, final standing/alignment point, seat anchor, facing, and exit path. Turn and align naturally, then lower into the chair with a smooth supported motion. Do not snap to a coordinate behind the desk.
+
+When seated:
+
+  - The pelvis rests on the seat at the correct height.
+  - The torso remains recognizably upright, with a mild working lean.
+  - Knees bend naturally and fit under the desk.
+  - Feet have stable support rather than swinging through the floor.
+  - Forearms and hands can reach the keyboard and the nearby abacus.
+  - The jacket and trousers follow the pose without penetrating the chair or desk.
+
+Critical existing-code trap: EntropyLab's typing pose is STANDING. In agent.js, laboratory work is currently excluded by lounge mode, and the lounge arm branch takes precedence over lab work. Simply combining lounge="sit" with labWork="type" does not produce a seated typing accountant. The outdoor sit pose is also a ground-rest/grooming behavior, not an office chair pose.
+
+Implement an explicit seated office-work pose/blend using shared rig conventions. Its support/footprint must match what is rendered. Preserve outdoor lounging and existing standing laboratory work. Do not make collision artificially tiny to hide a furniture/layout problem.
+
+10. VISIBLE COMPUTER AND ABACUS WORK
+
+Create a calm, staggered work loop. Suggested pacing is illustrative; tune it to the existing animation style:
+
+  - Type for approximately 5–9 seconds: small alternating hand/wrist motions,
+    restrained shoulder movement, and gaze directed toward the computer.
+  - Pause and inspect the screen for approximately 1–2 seconds.
+  - Shift attention to the abacus, reach toward a row, and calculate for roughly
+    3–5 seconds: move a small bead group along a rod, pause, and withdraw the hand.
+  - Glance back at the monitor or ledger, then resume computer work.
+
+Vary the timing deterministically per gorilla and station so the two accountants do not perform the same motion in lockstep. Keep most movement small and focused. A rare thoughtful head tilt or receipt check is enough personality; avoid incessant chest beating, frantic waving, or exaggerated comedy loops.
+
+Abacus use must be physically readable: the hand reaches the actual frame/row, the beads visibly travel along their rods, groups stay separated rather than intersecting, and the hand withdraws. Animate a bounded set of existing bead nodes or instances. Do not create/delete beads during every calculation, and do not treat every bead as an independent physics obstacle.
+
+Keyboard motion must meet the keyboard. Abacus motion must meet the abacus. Derive targets from the same workstation layout that places the geometry. Avoid decorative hand waving in empty air.
+
+Computer screens can show a simple procedural ledger grid, short labels such as IN / OUT / TOTAL, banana tally marks, a cursor, and a few rows updating at a restrained cadence. Use existing geometry/font/screen conventions; do not add a real browser, external texture request, chart framework, or accounting application. Keep screen drawing cached and update it only when its visual state changes.
+
+11. WORKPLACE OWNERSHIP, QUEUING, AND INTERRUPTION
+
+There are two workstation reservations, each with exactly one owner. Reserve a destination before committing to its approach. A third arriving gorilla should wait in a designated safe place or keep an appropriate existing valid behavior; it must not occupy the same chair or block the veil/central aisle.
+
+Use the existing movement/claim system where possible. Conceptually the behavior needs:
+
+  assigned -> wait/reserve -> approach veil -> cross and rise -> walk to chair
+  -> align -> sit -> computer/abacus work -> stand -> clear chair -> exit veil
+  -> ordinary outdoor behavior
+
+These are behavioral requirements, not a demand to duplicate the project's state machine under these exact names.
+
+On reassignment or work ending, stop the hand action cleanly, withdraw from the desk, stand, leave the chair safely, and route out. Release reservations at appropriate points so another worker cannot enter a chair while its previous occupant is still standing through it.
+
+Handle possession, remote control, grabs, airborne recovery, rage, fire, removal, and other existing overrides in their established priority order. Do not allow the office animation to fight player input or trap a controlled gorilla in a chair. Clean up or safely defer reservations and resume valid work only when the override permits it. Preserve the existing lab's treatment of rage and clothing.
+
+Make arrival, occupation, interruption, and departure work without teleportation, doorway deadlocks, chair stacking, or endless walking against furniture.
+
+12. IMPORTANT SHARED-SYSTEM CHANGES
+
+The current lab workplace support is SINGLETON-specific. clankers.js accepts one labSite, one labStations list, and one coatClip. scene-hub.js wires those to entropyLab. agent.js labCoatClip also assumes the existing lab boundary and clothing.
+
+Do not overwrite those values with B.C.A. or assume that passing a second labSite is supported. Implement the smallest coherent additive support for multiple relevant workplaces/roles. A compact descriptor keyed by site, with mouth/phase, station set, clothing role, and work pose, is a reasonable approach. Keep the existing actor manager and preserve the behavior of EntropyLab.
+
+Keep the change focused; avoid a general-purpose job framework or an unrelated rewrite of clankers.js. Separate reusable rig/workplace behavior from B.C.A.'s actual layout, furniture, colors, and station definitions. A small bca-models.js or similarly named module is appropriate if it fits the repository's conventions.
+
+Model workstation anchors in mouth-local coordinates and transform them to world coordinates exactly once per built visit, as EntropyLab does. Keep the mouth's yaw/floor, seat heading, reach targets, collision, and phase boundary in agreement.
+
+Trace and complete the existing phase/body integration: actor registration, unregistration, geometry refresh after attire changes, body-contact sampling after final poses, update, liveGeometry retention, and disposal. New clothing geometry must participate correctly in the renderer's geometry lifetime and picking/visibility conventions.
+
+Join the hub's furniture solids, terrain support, cave wall visibility, camera cover, outline/cutaway, and actor clearance systems. Keep hanging/emissive decorations out of expensive collision/outline paths according to existing sightHidden conventions.
+
+Preserve existing NPC synchronization. New workplace state must be represented or deterministically reconstructible through the established host/follower system; do not create an unrelated network loop. If you add a named B.C.A. zone, update both the hub zone mapping and remote-players.js island-zone recognition. The existing worker zone syntax already accepts a simple name such as bca; this task should not require a new backend service.
+
+13. SOURCE INTEGRATION CHECKLIST
+
+Verify the actual files and symbols before editing, then cover the relevant points:
+
+  - caves.js: open the intended slot with correct name, repository, hub place,
+    theme, and lowest-tier lighting behavior.
+  - scene-hub.js: facade theme, interior construction, solids/targets, phase,
+    workplace wiring, entry actions, navigation/presets, labels, work sites,
+    body tracking, updates, visibility, and cleanup.
+  - A small B.C.A. model/layout module, if needed: shared cached furniture,
+    functional computer/abacus parts, and two station definitions.
+  - agent.js: accountant clothing and spatial reveal, upright/seated work blend,
+    actual keyboard/abacus reach, and accurate pose envelopes.
+  - clankers.js: additive workplace routing/reservations and seated work lifecycle
+    that coexist with the original EntropyLab.
+  - dressing.js and hub-models.js: minimal new shared kit/icon/glyph support.
+    Confirm periods and all letters in B.C.A. render correctly.
+  - contributors.js: a usable bca debug/workplace alias without disturbing the
+    existing lab, obl, and lf aliases.
+  - routes.js: /bca mapped to hub/place bca with truthful title/description.
+  - npc-sync.js / remote-players.js: only the integration actually required.
+  - src/index.html: correct script load order if a new module is introduced.
+  - The application's README or relevant existing docs (not the accounting
+    repository): the cave location, route, and debug fixture.
+
+The activity normalizer already accepts OogaBoogaX repositories, and the inspected activity data already includes B.C.A. Do not add an unnecessary polling service or hardcoded activity feed.
+
+One existing regression assertion in test/run.mjs names c10 as sealed while asserting that DSB is internally addressable without its own hub cave. Opening c10 for B.C.A. legitimately changes the first assumption. Update that check narrowly to preserve the real DSB invariant and the new intended B.C.A. registration. Do not delete unrelated DSB coverage or weaken checks just to obtain a pass.
+
+14. PERFORMANCE, RENDERING, AND LIFECYCLE
+
+Follow AGENTS.md and the existing engine patterns:
+
+  - Vanilla JavaScript, classic IIFEs, window.BL, no frameworks, TypeScript,
+    package dependencies, external scripts, or external fonts.
+  - Preserve strict CSP. No unsafe-inline or unsafe-eval.
+  - Read files before editing. No git commands, branches, commits, or deployment.
+  - Cache reusable geometry; share immutable geometry while giving characters
+    their own articulated nodes and mutable state.
+  - No per-frame object/array allocation in movement, pose, overlay, or rendering.
+  - Keep every repeatedly used effect/node collection bounded.
+  - Use deterministic identity-based cosmetic variation.
+  - Preserve both WebGL2 and Canvas 2D behavior. The fallback may simplify the
+    visual effects as the existing engine does, but it must render a usable cave
+    and characters without throwing or breaking navigation.
+  - Respect the existing point-light budget and priority. The lowest tier already
+    uses its ten lights. The new mouth should use glowOnly; remember that dressing
+    lights also have a separate collection path. Make desks/screens readable with
+    restrained emissive/ambient treatment instead of stealing essential lights.
+  - Do not rebuild geometry, redraw unchanged screens, or run new network work
+    continuously merely because the cave exists.
+  - Preserve camera behavior: no automatic orbit, drift, or forced tracking.
+  - Clean up phase resources, actor associations, reservations, input targets,
+    timers if any, and visit-owned nodes. Preserve memoized immutable geometry
+    according to the existing scene lifetime model.
+  - Hub exit/re-entry must obey the existing leave contract and must not leak
+    workers, duplicate props, retain occupied ghost chairs, or grow GPU records.
+
+15. SCOPE AND PRIORITIES
+
+The required deliverable is the cave and its complete visible behavior. Prioritize:
+
+  1. A real accessible B.C.A. cave that belongs visually beside EntropyLab.
+  2. The same gorillas approaching, crossing the veil, standing, and becoming suited.
+  3. Two well-composed desks with real chairs, computers, and animated abacuses.
+  4. Correct seated work, departure, ownership, and coexistence with existing caves.
+  5. Navigation, activity integration, performance, fallback, and cleanup.
+
+Do not stop at a facade, two stationary mannequin gorillas, a standing typing loop, or a suit that appears everywhere. Do not expand into a donation/payment flow, accounting backend, login changes, financial spreadsheet UI, new currency/economy, unrelated island redesign, or edits to the accounting repository's documents. New sound is optional and lower priority than visual/movement correctness; do not add an audio system for this task.
+
+16. ACCEPTANCE CRITERIA
+
+Use the following as the completion and maintainer play-test checklist. Under “wait” verification mode, distinguish source/build verification from runtime behavior that still needs play-testing.
+
+  A. The 10 o'clock cave is open and recognizable as B.C.A., with a matching
+     stone/timber facade and readable branding. Adjacent caves retain their looks.
+
+  B. /bca selects the correct hub place. Cave navigation does not attempt to enter
+     a null/unregistered scene. Walking into the office retains world continuity.
+
+  C. An eligible ordinary gorilla visibly approaches from outside, crosses the
+     transparent veil, stands upright, and becomes an accountant in a proper suit.
+     It is visibly the same actor before and after crossing.
+
+  D. Clothing and veil effects align with the actual threshold from both sides.
+     Stopping or reversing mid-crossing does not pop, flicker, duplicate, or leave
+     incorrect attire behind. Exiting restores the normal outdoor form.
+
+  E. There are exactly two complete desks. Each has a chair, computer/keyboard,
+     and a recognizable abacus with moving beads.
+
+  F. Two workers can independently reserve, approach, turn, sit, and work. Their
+     pelvis, legs, feet, arms, and clothing fit the furniture throughout the motion.
+     Typing and bead contact are visible and plausible.
+
+  G. Both work loops are asynchronous. Each gorilla uses its computer AND abacus;
+     neither abacus is merely decorative. The entrance composition shows the
+     suits and work, rather than only backs of monitors or hidden characters.
+
+  H. A third worker cannot double-book a desk or jam the entrance. Reassignment,
+     departure, control/override events, and cleanup release station ownership
+     safely. Ordinary workers do not walk through chairs, desks, or each other.
+
+  I. EntropyLab gorillas still wear lab coats and perform their previous work.
+     Other cave assignments, Matrix appearance, outdoor lounging, and existing
+     companion control/override behavior retain their established semantics.
+
+  J. Contributor identity/activity remain truthful. A documented deterministic
+     fixture can show two B.C.A. workers and a separate overflow case using named
+     existing contributors without changing production timestamps.
+
+  K. The cave is usable on desktop/touch, in the normal camera modes, on low
+     quality, and under Canvas 2D's supported simplifications. No new console
+     errors, unreadable critical signage, camera traps, or blocked exits.
+
+  L. Leaving and returning does not duplicate furniture/workers, leave stale
+     reservations, retain phase targets, or break the hub's lifecycle contract.
+
+17. VERIFICATION AND FINAL HANDOFF
+
+Respect the application repository's current testing policy. This prompt keeps the default
+“wait” mode: finish with npm run build and node --check on every touched JavaScript
+file. The build alone does not parse all JavaScript. Do not automatically run scene
+tests, runtime probe scripts, browser screenshots, preview-card captures, or a full
+suite. If the maintainer separately authorizes “fast” or “full,” follow AGENTS.md's
+scope and failure-ledger rules, including its stop rule for repeated failures.
+
+Keep any test changes meaningful and limited to changed behavior or existing
+contracts. Do not invent dozens of implementation-mirroring checks or add a third
+file to the two-file test suite. Record unexecuted runtime/visual checks honestly
+as pending maintainer play-test.
+
+At completion, provide:
+
+  - A concise account of what was implemented and where to find the cave.
+  - The working route/navigation entry and exact debug URLs/fixtures using valid
+    existing contributor handles, including two accountants and overflow traffic.
+  - A brief explanation of the shared workplace and seated-pose integration.
+  - The build/syntax checks actually run and their results.
+  - A short “Found / needs play-test” list for runtime verification not performed.
+  - Any genuine remaining issue; do not describe missing core behavior as optional
+    polish or claim runtime verification that was not performed.
+
+The finished feature should let someone watch a gorilla amble out of the jungle,
+cross the B.C.A. veil, straighten its suit, take its chair, type into a ledger, and
+check the figures on an abacus—and feel that this accounting cave has always
+belonged in Ooga Booga Land.
